@@ -1,0 +1,82 @@
+body {
+    font-family: 'nanum gothic', sans-serif
+}
+
+.header {
+    font-family: 'MaruBuri';
+    font-size: 40px;
+    font-weight: ;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.style-input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.style-input-content {
+    margin-right: 20px;
+    width: 250px;
+    font-size: 17px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border-color: #A2AAAD;
+    border-style: solid;
+}
+
+.style-input-date {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 17px;
+    border-color: #A2AAAD;
+    border-style: solid;
+}
+
+.style-add-button {
+    position: relative;
+    height: 50px;
+    padding: 10px 15px;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    width: 80px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.js-display {
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 15px;
+
+}
+
+.delete-button {
+    padding: 10px 15px;
+    width: 100px;
+    background-color: #A2AAAD;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 13px;
+}
+
+.delete-button:hover {
+    background-color: black;
+    transition: ease-in 0.5s;
+}
+
