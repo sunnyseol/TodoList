@@ -12,20 +12,21 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-content: center;
+    width: 80%vw;
 }
 
 .style-input-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    gap: 15px;
     margin-bottom: 30px;
 }
 
+
 .style-input-content {
-    margin-right: 20px;
-    width: 250px;
+    width: 300px;
     font-size: 17px;
     padding: 10px 20px;
     border-radius: 25px;
@@ -34,34 +35,35 @@ body {
 }
 
 .style-input-date {
-    margin-right: 20px;
+    width: 150px;
     padding: 10px;
     border-radius: 25px;
     font-size: 17px;
     border-color: #A2AAAD;
     border-style: solid;
+    justify-self: center;
+    text-align: center;
+
 }
 
 .style-add-button {
-    position: relative;
     height: 50px;
     padding: 10px 15px;
     background-color: #007AFF;
     color: white;
     border: none;
     border-radius: 25px;
-    width: 80px;
+    width: 100px;
     cursor: pointer;
     font-size: 15px;
 }
 
-
 .js-display {
     font-size: 17px;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 3fr 2fr 1fr;
+    align-items: center;
     gap: 15px;
-
 }
 
 .delete-button {
@@ -72,11 +74,20 @@ body {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-left: 13px;
 }
 
 .delete-button:hover {
     background-color: black;
-    transition: ease-in 0.5s;
+    transition: ease-in 0.3s;
+}
+.grid-aline-date {
+    display: grid;
+    width: 150px;
+    justify-self: center; 
+    text-align: center;
 }
 
+.grid-aline-centent {
+    padding-left: 20px;
+    width: 300px;
+}

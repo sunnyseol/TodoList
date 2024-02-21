@@ -1,16 +1,36 @@
-const todoArray = [{
+let todoArray = JSON.parse(localStorage.getItem('todoArray'));
+
+if(!todoArray) {
+  todoArray = [{
+    content: '선물 주문하기',
+    date: '2024-01-30'
+  },{
+    content: '주유하기',
+    date:'2024-01-30'
+  }];
+}
+
+
+/* const todoArray = [{
   content: '선물 주문하기',
   date: '2024-01-30'
 },{
   content: '주유하기',
   date:'2024-01-30'
-}];
+}]; */
 
 /*
 1. input value 가져오기
 2. DOM 화면에 표기하기
 3. 지우기 버튼 만들기 */
+
 displayTodo();
+
+
+function saveToStorage() {
+  localStorage.setItem('todoArray', JSON.stringify(todoArray));
+}
+
 
 function displayTodo() {
   let todoHtml = '';
@@ -18,8 +38,8 @@ function displayTodo() {
   todoArray.forEach((object, index) => {
     const { content, date } = object;
     const html = `
-    <div>${content}</div>
-    <div>${date}</div>
+    <span class="grid-aline-centent">${content}</span>
+    <div class="grid-aline-date">${date}</div>
     <button class="delete-button">지우기</button>`;
 
     todoHtml += html;
@@ -34,6 +54,10 @@ function displayTodo() {
       displayTodo();
     });
   });
+
+
+  saveToStorage();
+
 }
 
 document.querySelector('.js-add-button').addEventListener('click', () => { inputElement();
